@@ -8,7 +8,7 @@ def fibosum(n):
     for i in range(n ):
         a, b = b, a + b
         sum = a + b
-    return sum 
+    return sum
 
 print("Sum of first 5 terms of the fibonacci series:", fibosum(5))
 print("Sum of first 10 terms of the fibonacci series:", fibosum(10))

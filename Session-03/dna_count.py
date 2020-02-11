@@ -12,7 +12,7 @@ countT = 0
 countG = 0
 
 for i in dna_seq:
-    count += 0
+    count += 1
     if i == "A":
         countA += 1
     elif i == "C":
@@ -22,9 +22,9 @@ for i in dna_seq:
     else:
         countG += 1
 
-print(count)
-print(countA)
-print(countC)
-print(countT)
-print(countG)
+print("Total length: ", count)
+print("A: ", countA)
+print("C: ", countC)
+print("T: ", countT)
+print("G: ", countG)
 

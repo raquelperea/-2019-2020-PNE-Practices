@@ -1,0 +1,1 @@
+# Write a program that opens the U5.txt file and prints on the console all the lines except the first one

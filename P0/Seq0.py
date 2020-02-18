@@ -1,8 +1,10 @@
+from pathlib import Path
+
+
 def seq_ping():
     print("Ok!")
 
 
-from pathlib import Path
 
 def seq_read_fasta(filename):
 

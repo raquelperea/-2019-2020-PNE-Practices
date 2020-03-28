@@ -2,7 +2,6 @@ from Seq0 import *
 
 seq1 = "ATTCCCGGGG"
 
-seq_check(seq1)
 
 
 print(f"Seq:    {seq1}")

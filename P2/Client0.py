@@ -1,16 +1,46 @@
-# innit function
-
+import termcolor
+import socket
 class Client:
     def __init__(self, IP, PORT):
-        IP = self.IP
-        PORT = self.PORT
+        self.IP = IP
+        self.PORT = PORT
+
 
     def ping(self):
         print("Ok")
-        return self
 
-IP = "212"
-PORT = 8080
-c = Client(IP, PORT)
+    def __str__(self):
+        return  f"Connection to SERVER at {self.IP}, PORT: {self.PORT}"
 
-print(c.ping)
+    def talk(self,msg):
+        response = ''
+        # -- Create the socket
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        # establish the connection to the Server (IP, PORT)
+        s.connect((self.IP, self.PORT))
+
+        # Send data.
+        s.send(str.encode(msg))
+
+        # Receive data
+        response = s.recv(2048).decode("utf-8")
+
+        # Close the socket
+        s.close()
+
+        # Return the response
+        return response
+
+    def debug_talk(self,msg):
+        mesage = str(msg)
+        response = self.talk(msg)
+        print('To server')
+        termcolor.cprint(mesage, 'blue')
+        print('From server')
+        termcolor.cprint(response,'green')
+
+
+
+
+

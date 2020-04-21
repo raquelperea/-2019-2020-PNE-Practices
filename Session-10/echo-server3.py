@@ -1,6 +1,6 @@
 import socket
 
-IP = "212.128.253.173"
+IP = "127.0.0.1"
 PORT = 8083
 count = 0
 ip_client_list = []

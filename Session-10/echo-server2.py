@@ -1,6 +1,6 @@
 import socket
 
-IP = "212.128.253.173"
+IP = "127.0.0.1"
 PORT = 8082
 count = 0
 
@@ -41,6 +41,6 @@ while True:
         print("Cient IP and PORT", client_ip_port)
 
         # Step 6: Send a response message to the client
-        response = f"ECHO:{msg}\n "
+        response = f"ECHO:{msg}{count} \n  "
         cs.send(response.encode())
         cs.close()

@@ -90,18 +90,6 @@ while True:
                 print(f" {i}: {seq.count_base(i)} {round((seq.count_base(i) / seq.len()) * 100, 2)}%")
                 response += f" {i}: {seq.count_base(i)} {round((seq.count_base(i) / seq.len()) * 100, 2)}%"
 
-
-
-
-
-
-
-
-
-
-
-
-
         print(f"Receiving message: {msg} ")
 
         # Step 6: Send a response message to the client

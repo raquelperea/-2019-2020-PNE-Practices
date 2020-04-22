@@ -1,0 +1,22 @@
+The request line is:
+GET /hello HTTP/1.1
+The path is:
+hello HTTP
+
+
+The request line is:
+GET /file.html HTTP/1.1
+The path is:
+file.html HTTP
+
+
+The request line is:
+GET /hi/there?name=virus&type=corona HTTP/1.1
+The path is:
+hi/there?name=virus&type=corona HTTP
+
+
+
+
+
+ http://127.0.0.1:8084/dna/u5

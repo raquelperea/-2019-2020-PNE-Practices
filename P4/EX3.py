@@ -2,10 +2,9 @@ import socket
 import termcolor
 from pathlib import Path
 
-
 # -- Server network parameters
 IP = "127.0.0.1"
-PORT = 8090
+PORT = 8080
 
 
 def process_client(s):
@@ -21,7 +20,6 @@ def process_client(s):
     # -- The request line is the first
     req_line = lines[0]
 
-
     print("Request line: ", end="")
     termcolor.cprint(req_line, "green")
 
@@ -32,8 +30,19 @@ def process_client(s):
     # blank line
     # Body (content to send)
 
-    # This new contents are written in HTML language
-    body = Path("index.html").read_text()
+
+    if "/info/A" in req_line:
+        # This new contents are written in HTML language
+        body = Path("A.html").read_text()
+
+    elif "/info/C" in req_line:
+        # This new contents are written in HTML language
+        body = Path("C.html").read_text()
+    else:
+        body = ""
+
+
+
     # -- Status line: We respond that everything is ok (200 code)
     status_line = "HTTP/1.1 200 OK\n"
 

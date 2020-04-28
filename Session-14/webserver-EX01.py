@@ -28,7 +28,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         # Message to send back to the clinet
         contents = ""
 
-        if self.requestline == "GET / HTTP/1.1":
+        if self.path == "/":
             contents = "Welcome to my server"
 
         else:

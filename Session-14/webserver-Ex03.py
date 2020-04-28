@@ -4,7 +4,7 @@ import termcolor
 from pathlib import Path
 
 # Define the Server's port
-PORT = 8080
+PORT = 8081
 
 # -- This is for preventing the error: "Port already in use"
 socketserver.TCPServer.allow_reuse_address = True
@@ -35,17 +35,17 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
         # Message to send back to the clinet
 
-        if self.path == "/":
-            contents = index_run("index.html")
+        try:
+            if self.path == "/":
+                contents = index_run("index.html")
+            else:
+                contents = index_run("../Session-14/" + self.path)
+            self.send_response(200)
 
-        else:
+        except FileNotFoundError:
             contents = index_run("Error.html")
-
-        if self.path == "/":
-            # Generating the response message
-            self.send_response(200)  # -- Status line: OK!
-        else:
             self.send_response(404)
+
 
 
         # Define the content-type header:

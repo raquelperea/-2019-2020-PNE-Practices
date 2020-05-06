@@ -1,15 +1,24 @@
 
-           Write a sequence  <input type="text" name="msg">
-        <br>
-           Select operation:
-              <input type="radio" name="op" value="Info"> Info
-              <input type="radio" name="op" value="Comp"> Comp
-              <input type="radio" name="op" value="Rev"> Rev
-        <br>
-            Perform operation:
-          <input type="submit" value="OPERATE!" >
-             <br><br>
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>OPERATIONS</title>
+  </head>
+  <body>
+    <form action="operation" method="get">
+      <hr>
+      Write a sequence:  <input type="text" name="msg">
+      <br>
+      Select operation:
+      <input type="radio" name="op" value="INFO" checked> Info
+      <input type="radio" name="op" value="COMP"> Comp
+      <input type="radio" name="op" value="REV"> Rev
+      </select>
+       <br>
+        Perform operation <input type="submit", value="OPERATE!"/>
+      <hr>
     </form>
+
   </body>
 </html>

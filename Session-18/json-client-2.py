@@ -50,10 +50,10 @@ print(len(phoneNumbers))
 
 # Print all the numbers
 for i, num in enumerate(phoneNumbers):
-    termcolor.cprint("  Phone {}:".format(i), 'blue')
+    termcolor.cprint(" Phone {}:".format(i), 'blue')
 
     # The element num contains 2 fields: number and type
-    termcolor.cprint("    Type: ", 'red', end='')
+    termcolor.cprint(" Type: ", 'red', end='')
     print(num['type'])
-    termcolor.cprint("    Number: ", 'red', end='')
+    termcolor.cprint(" Number: ", 'red', end='')
     print(num['number'])

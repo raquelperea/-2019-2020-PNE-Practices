@@ -1,11 +1,12 @@
-[{
+[
+  {
     "Firstname": "Troll",
     "Lastname": "Face",
     "age": 20,
     "phoneNumber": [
       {"number": "1111", "type": "home"},
       {"number": "333", "type" : "office"}
-    ]
+      ]
   },
 
   {
@@ -14,7 +15,7 @@
     "age": 40,
     "phoneNumber": [
       {"number": "9999-8888", "type": "home"}
-    ]
+      ]
   },
 
   {
@@ -25,7 +26,7 @@
       {"number": "1111", "type": "Dance floor"},
       {"number": "333", "type" : "office"},
       {"number": "7989986", "type" : "home"}
-    ]
+      ]
   }
 
 ]

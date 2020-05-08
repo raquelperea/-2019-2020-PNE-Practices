@@ -12,6 +12,6 @@ for e in list_genes:
     for key, value in s.count().items():
         while value > count_values:
             count_values = value
-            max_base = key
+            base_max = key
 
-    print("Gene", e,":", "The most repeated base is:", max_base)
+    print("Gene", e,":", "The most repeated base is:", base_max)
